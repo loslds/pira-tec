@@ -1,34 +1,32 @@
 import {useState, useCallback, useLayoutEffect} from 'react'
 
-const getDimension = element => element.getBoudingClientRect();
+const getDimensions = (element) => element.getBoundingClientRect();
 
-export function useDimensions(responsive = true) {
-const [dimension, setDimension] =useState(null)
-const [element, setElement] = useState(null)
+export function useDimensions(responsive = true){
 
-const hook = useCallback(e => setElement(e),[]);
+  const [dimensions, setDimensions] = useState(null)
+  const [element, setElement] = useState(null)
+  
+  const hook = useCallback(e => setElement(e),[]);
 
-useLayoutEffect(() => {
-  if (element){
-    const updateDimension = () => {
-      window.requestAnimationFrame(() => {
-        setDimension(getDimension(element));
-      })
-    };
-
-    updateDimension();
-
-    if(responsive){
-      window.addEventListener('resize', updateDimension);
-      return () => {
-        window.removeEventListener('resize', updateDimension);
+  useLayoutEffect(() => {
+    if (element){
+      const updateDimensions = () => {
+        window.requestAnimationFrame(() => {
+          setDimensions(getDimensions(element));
+        })
       };
+
+      updateDimensions();
+
+      if(responsive){
+        window.addEventListener('resize', updateDimensions);
+        return () => {
+          window.removeEventListener('resize', updateDimensions);
+        };
+      }
     }
-  }
-}, [element, hook, responsive] );
+  }, [element, hook, responsive] );
 
-
-
-
-return[hook,dimension,element]
+  return[hook,dimensions,element]
 }

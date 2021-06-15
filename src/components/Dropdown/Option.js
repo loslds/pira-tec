@@ -10,14 +10,20 @@ export function DropdownOpction({ name, content: Content, backgroundHeight }) {
   const idRef = useRef(++lastOptionId);
   const id = idRef.current;
 
-  const [optionHook, optionDimension] = useDimensions();
-  const [registered, setReistered] = useState(false)
-  const {registerOption, updateOptionProps, deleteOptionById, setTargetId, targetId } = useContext(Context);
+  const [optionHook, optionDimensions] = useDimensions();
+  const [registered, setRegistered] = useState(false)
+  const {
+    registerOption, 
+    updateOptionProps, 
+    deleteOptionById, 
+    setTargetId, 
+    targetId } = useContext(Context);
 
   useEffect(() => {
-    if (!registered && optionDimension) {
+    if (!registered && optionDimensions) {
       const WrappedContent = () => {
         const contentRef = useRef();
+
         useEffect(() => {
           const contentDimensions = contentRef.current.getBoudingClientReact();
           updateOptionProps(id, {contentDimensions} );
@@ -32,34 +38,36 @@ export function DropdownOpction({ name, content: Content, backgroundHeight }) {
 
       registerOption( {
         id,
-        optionDimension,
-        optionContextX : optionDimension.x + optionDimension.width / 2 ,
+        optionDimensions,
+        optionContextX : optionDimensions.x + optionDimensions.width / 2 ,
         WrappedContent,
         backgroundHeight,
       } );
 
-      setReistered(true);
+      setRegistered(true);
 
-    } else if (registered){
-      updateOptionProps(id, {
-        optionContextX : optionDimension.x + optionDimension.width / 2 ,
-      } );
-    }
+    } else if (registered) {
+      updateOptionProps(id, {optionDimensions, optionCenterX: optionDimensions.x + optionDimensions.width / 2, });
+    };
   },[
     registerOption,
     id,
     registered,
-    optionDimension,
+    optionDimensions,
     updateOptionProps,
     deleteOptionById,
     backgroundHeight,
   ]);
 
+  useEffect(() => deleteOptionById(id), [deleteOptionById, id]);
+
   const handleOpen = () => setTargetId(id);
   const handleClose = () => setTargetId(null);
   const handleTouch = () => (window.isMobile = true);
+  
   const handleClick = (e) => {
     e.preventDefault();
+    
     return targetId === id ? handleClose : handleOpen
   }
 
