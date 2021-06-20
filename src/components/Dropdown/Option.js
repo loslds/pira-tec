@@ -1,33 +1,35 @@
-import React, {useRef, useState, useContext, useEffect} from 'react';
-import { motion } from 'framer-motion';
-import { useDimensions } from './Dimensions';
-import { Context } from './Provider';
+import React, { useRef, useState, useContext, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { useDimensions } from './Dimensions'
+import { Context } from './Provider'
 
-let lastOptionId = 0;
+let lastOptionId = 0
 
-export function DropdownOpction({ name, content: Content, backgroundHeight }) {
+export default function DropdownOpction ({ name, content: Content, backgroundHeight }) {
+  const idRef = useRef(++lastOptionId)
+  const id = idRef.current
 
-  const idRef = useRef(++lastOptionId);
-  const id = idRef.current;
-
-  const [optionHook, optionDimensions] = useDimensions();
+  const [optionHook, optionDimensions] = useDimensions()
   const [registered, setRegistered] = useState(false)
   const {
-    registerOption, 
-    updateOptionProps, 
-    deleteOptionById, 
-    setTargetId, 
-    targetId } = useContext(Context);
+    registerOption,
+    updateOptionsProps,
+    deleteOptionById,
+    setTargetId,
+    targetId
+  } = useContext(Context)
+
+  console.log('DropdownOpction updateOptionsProps', updateOptionsProps)
 
   useEffect(() => {
     if (!registered && optionDimensions) {
       const WrappedContent = () => {
-        const contentRef = useRef();
+        const contentRef = useRef()
 
         useEffect(() => {
-          const contentDimensions = contentRef.current.getBoudingClientReact();
-          updateOptionProps(id, {contentDimensions} );
-        },[])
+          const contentDimensions = contentRef.current.getBoudingClientReact()
+          if (updateOptionsProps) updateOptionsProps(id, { contentDimensions })
+        }, [])
 
         return (
           <div ref={contentRef}>
@@ -36,41 +38,41 @@ export function DropdownOpction({ name, content: Content, backgroundHeight }) {
         )
       }
 
-      registerOption( {
+      registerOption({
         id,
         optionDimensions,
-        optionContextX : optionDimensions.x + optionDimensions.width / 2 ,
+        optionContextX: optionDimensions.x + optionDimensions.width / 2,
         WrappedContent,
-        backgroundHeight,
-      } );
+        backgroundHeight
+      })
 
-      setRegistered(true);
-
+      setRegistered(true)
     } else if (registered) {
-      updateOptionProps(id, {optionDimensions, optionCenterX: optionDimensions.x + optionDimensions.width / 2, });
+      if (updateOptionsProps) {
+        updateOptionsProps(id, { optionDimensions, optionCenterX: optionDimensions.x + optionDimensions.width / 2 })
+      }
     };
-  },[
+  }, [
     registerOption,
     id,
     registered,
     optionDimensions,
-    updateOptionProps,
+    updateOptionsProps,
     deleteOptionById,
-    backgroundHeight,
-  ]);
+    backgroundHeight
+  ])
 
-  useEffect(() => deleteOptionById(id), [deleteOptionById, id]);
+  useEffect(() => deleteOptionById(id), [deleteOptionById, id])
 
-  const handleOpen = () => setTargetId(id);
-  const handleClose = () => setTargetId(null);
-  const handleTouch = () => (window.isMobile = true);
-  
+  const handleOpen = () => setTargetId(id)
+  const handleClose = () => setTargetId(null)
+  const handleTouch = () => (window.isMobile = true)
+
   const handleClick = (e) => {
-    e.preventDefault();
-    
+    e.preventDefault()
+
     return targetId === id ? handleClose : handleOpen
   }
-
 
   return (
     <motion.button

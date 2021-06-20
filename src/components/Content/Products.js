@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { ProductsWrapper } from './styles';
+import { ProductsWrapper } from './styles'
 
 export const Products = () => (
   <ProductsWrapper>
@@ -64,4 +64,4 @@ export const Products = () => (
       </li>
     </ul>
   </ProductsWrapper>
-);
+)

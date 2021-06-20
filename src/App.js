@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 import GlobalStyles from './styles/GlobalStyles'
 import Layout from './components/Layout'
 import Navbar from './components/Navbar'
 
-function App() {
+function App () {
   return (
     <>
       <Layout>
@@ -11,7 +11,7 @@ function App() {
       </Layout>
       <GlobalStyles/>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

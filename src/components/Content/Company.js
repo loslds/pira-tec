@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { CompanyWrapper } from './styles';
+import { CompanyWrapper } from './styles'
 
 export const Company = () => (
   <CompanyWrapper>
@@ -54,4 +54,4 @@ export const Company = () => (
       </li>
     </ul>
   </CompanyWrapper>
-);
+)

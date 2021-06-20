@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { DevelopersWrapper } from './styles';
+import { DevelopersWrapper } from './styles'
 
 export const Developers = () => (
   <DevelopersWrapper>
@@ -50,4 +50,4 @@ export const Developers = () => (
       </li>
     </ul>
   </DevelopersWrapper>
-);
+)

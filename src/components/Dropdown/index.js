@@ -1,2 +1,2 @@
-export { DropdownOpction } from './Option'
-export { DropdownProvider} from './Provider'
+export { default as DropdownOpction } from './Option'
+export { default as DropdownProvider } from './Provider'

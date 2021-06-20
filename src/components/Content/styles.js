@@ -1,15 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
 const h3 = css`
   font-size: 16px;
   font-weight: bold;
   text-transform: uppercase;
   color: #32325d;
-`;
+`
 
 const p = css`
   color: #6b7c93;
-`;
+`
 
 const hover = css`
   cursor: pointer;
@@ -17,7 +17,7 @@ const hover = css`
   &:hover {
     opacity: 0.7;
   }
-`;
+`
 
 export const ProductsWrapper = styled.div`
   padding: 32px 35px;
@@ -96,7 +96,7 @@ export const ProductsWrapper = styled.div`
       }
     }
   }
-`;
+`
 
 export const DevelopersWrapper = styled.div`
   padding: 32px 35px;
@@ -172,7 +172,7 @@ export const DevelopersWrapper = styled.div`
       }
     }
   }
-`;
+`
 
 export const CompanyWrapper = styled.div`
   padding: 32px 35px;
@@ -238,4 +238,4 @@ export const CompanyWrapper = styled.div`
       }
     }
   }
-`;
+`
