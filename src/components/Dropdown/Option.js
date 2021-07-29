@@ -71,7 +71,7 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
   const handleClick = (e) => {
     e.preventDefault()
 
-    return targetId === id ? handleClose : handleOpen
+    return targetId === id ? handleClose() : handleOpen()
   }
 
   return (
