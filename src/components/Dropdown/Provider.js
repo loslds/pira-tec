@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react'
-
+import PropTypes from 'prop-types'
 export const Context = React.createContext()
 
 export default function DropdownProvider ({ children }) {
@@ -66,7 +66,15 @@ export default function DropdownProvider ({ children }) {
           cachedId,
           setCachedId
         }}>
-            {children}
+          {children}
         </Context.Provider>
   )
+}
+
+DropdownProvider.propTypes = {
+  children: PropTypes.any
+}
+
+DropdownProvider.defaultProps = {
+  children: null
 }

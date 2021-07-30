@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 import { Context } from './Provider'
 import { DropdownSection } from './Section'
 
-export function DropdownRoot () {
+export default function DropdownRoot () {
   const { options } = useContext(Context)
   return (
     <div className="dropdown-Root">

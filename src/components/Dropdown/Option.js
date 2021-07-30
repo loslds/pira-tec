@@ -1,4 +1,6 @@
 import React, { useRef, useState, useContext, useEffect } from 'react'
+import PropTypes from 'prop-types'
+
 import { motion } from 'framer-motion'
 import { useDimensions } from './Dimensions'
 import { Context } from './Provider'
@@ -19,8 +21,6 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
     targetId
   } = useContext(Context)
 
-  console.log('DropdownOpction updateOptionsProps', updateOptionsProps)
-
   useEffect(() => {
     if (!registered && optionDimensions) {
       const WrappedContent = () => {
@@ -28,7 +28,7 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
 
         useEffect(() => {
           const contentDimensions = contentRef.current.getBoudingClientReact()
-          if (updateOptionsProps) updateOptionsProps(id, { contentDimensions })
+          updateOptionsProps(id, { contentDimensions })
         }, [])
 
         return (
@@ -47,11 +47,12 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
       })
 
       setRegistered(true)
-    } else if (registered) {
-      if (updateOptionsProps) {
-        updateOptionsProps(id, { optionDimensions, optionCenterX: optionDimensions.x + optionDimensions.width / 2 })
-      }
-    };
+    } else if (registered && optionDimensions) {
+      updateOptionsProps(id, {
+        optionDimensions,
+        optionCenterX: optionDimensions.x + optionDimensions.width / 2
+      })
+    }
   }, [
     registerOption,
     id,
@@ -88,4 +89,15 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
       {name}
     </motion.button>
   )
+}
+DropdownOpction.propTypes = {
+  name: PropTypes.any,
+  content: PropTypes.any,
+  backgroundHeight: PropTypes.any
+}
+
+DropdownOpction.defaultProps = {
+  name: null,
+  content: null,
+  backgroundHeight: null
 }
