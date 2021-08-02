@@ -1,9 +1,6 @@
 import React from 'react'
 import { Products, Developers, Company } from '../Content'
 import { DropdownProvider, DropdownOpction, DropdownRoot } from '../Dropdown'
-// import DropdownProvider from '../Dropdown/Provider'
-// import DropdownOpction from '../Dropdown/Option'
-// import DropdownRoot from '../Dropdown/Root'
 import { Container, DropdownStyles } from './styles'
 
 function Navbar () {

@@ -6,7 +6,10 @@ export function useDimensions (responsive = true) {
   const [dimensions, setDimensions] = useState(null)
   const [element, setElement] = useState(null)
 
-  const hook = useCallback(e => setElement(e), [])
+  const hook = useCallback(e => {
+    console.log(' hook element', e)
+    setElement(e)
+  }, [])
 
   useLayoutEffect(() => {
     if (element) {

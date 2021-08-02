@@ -22,13 +22,17 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
   } = useContext(Context)
 
   useEffect(() => {
+    // console.log('registered', registered)
+    // console.log('optionDimensions', optionDimensions)
     if (!registered && optionDimensions) {
       const WrappedContent = () => {
         const contentRef = useRef()
 
         useEffect(() => {
-          const contentDimensions = contentRef.current.getBoudingClientReact()
-          updateOptionsProps(id, { contentDimensions })
+          if (contentRef.current && contentRef.current.getBoundingClientRect) {
+            const contentDimensions = contentRef.current.getBoundingClientRect()
+            updateOptionsProps(id, { contentDimensions })
+          }
         }, [])
 
         return (
@@ -91,9 +95,9 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
   )
 }
 DropdownOpction.propTypes = {
-  name: PropTypes.any,
+  name: PropTypes.string,
   content: PropTypes.any,
-  backgroundHeight: PropTypes.any
+  backgroundHeight: PropTypes.string
 }
 
 DropdownOpction.defaultProps = {
