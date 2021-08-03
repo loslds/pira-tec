@@ -16,6 +16,7 @@ export const DropdownStyles = styled.div`
     color: #fff;
     font-size: 18px;
     transition: 0.2s;
+
     &:hover,
     &:focus {
       opacity: 0.55;
@@ -29,6 +30,7 @@ export const DropdownStyles = styled.div`
 
   .dropdown-arrow {
     position: relative;
+
     &::before {
       content: '';
       position: absolute;

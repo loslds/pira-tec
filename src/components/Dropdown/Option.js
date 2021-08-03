@@ -22,8 +22,6 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
   } = useContext(Context)
 
   useEffect(() => {
-    // console.log('registered', registered)
-    // console.log('optionDimensions', optionDimensions)
     if (!registered && optionDimensions) {
       const WrappedContent = () => {
         const contentRef = useRef()
