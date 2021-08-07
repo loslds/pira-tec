@@ -1,5 +1,5 @@
 module.exports = {
-    printWidth: 100,
+    printWidth: 80,
     singleQuote: true,
     trailingComma: 'none',
     tabWidth: 2,
@@ -7,4 +7,3 @@ module.exports = {
     arrowParens: 'avoid',
     endOfLine: 'auto'
   }
-  

@@ -1,5 +1,5 @@
 {
-    "editor.rulers": [100],
+    "editor.rulers": [80],
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
       "source.fixAll.tslint": true,
@@ -11,4 +11,3 @@
       "*.jsx": "javascriptreact"
     }
   }
-  

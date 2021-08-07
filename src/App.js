@@ -3,13 +3,13 @@ import GlobalStyles from './styles/GlobalStyles'
 import Layout from './components/Layout'
 import Navbar from './components/Navbar'
 
-function App () {
+function App() {
   return (
     <>
       <Layout>
-        <Navbar/>
+        <Navbar />
       </Layout>
-      <GlobalStyles/>
+      <GlobalStyles />
     </>
   )
 }

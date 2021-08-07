@@ -7,7 +7,11 @@ import { Context } from './Provider'
 
 let lastOptionId = 0
 
-export default function DropdownOpction ({ name, content: Content, backgroundHeight }) {
+export default function DropdownOpction({
+  name,
+  content: Content,
+  backgroundHeight
+}) {
   const idRef = useRef(++lastOptionId)
   const id = idRef.current
 
@@ -71,7 +75,7 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
   const handleClose = () => setTargetId(null)
   const handleTouch = () => (window.isMobile = true)
 
-  const handleClick = (e) => {
+  const handleClick = e => {
     e.preventDefault()
 
     return targetId === id ? handleClose() : handleOpen()
@@ -80,10 +84,10 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
   return (
     <motion.button
       className="dropdown-option"
-      ref= {optionHook}
+      ref={optionHook}
       onMouseDown={handleClick}
-      onHoverStart={ () => window.isMobile && handleOpen()}
-      onHoverEnd={ () => window.isMobile && handleClose()}
+      onHoverStart={() => window.isMobile && handleOpen()}
+      onHoverEnd={() => window.isMobile && handleClose()}
       onTouchStart={handleTouch}
       onFocus={handleOpen}
       onBlur={handleClose}
