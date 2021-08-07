@@ -27,7 +27,7 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
         const contentRef = useRef()
 
         useEffect(() => {
-          if (contentRef.current && contentRef.current.getBoundingClientRect) {
+          if (contentRef.current) {
             const contentDimensions = contentRef.current.getBoundingClientRect()
             updateOptionsProps(id, { contentDimensions })
           }

@@ -30,7 +30,7 @@ export default function DropdownProvider ({ children }) {
   const updateOptionsProps = useCallback((optiopnsId, props) => {
     setOptions(items =>
       items.map(item => {
-        if (item === optiopnsId) {
+        if (item.id === optiopnsId) {
           item = { ...item, ...props }
         }
         return item
