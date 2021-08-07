@@ -13,18 +13,21 @@ function Navbar () {
                 <DropdownOpction
                   name="Produtos"
                   content={Products}
+                  backgroundHeight={286}
                 />
             </li>
             <li>
                 <DropdownOpction
                   name="Serviços"
                   content={Developers}
+                  backgroundHeight={167}
                 />
             </li>
             <li>
                 <DropdownOpction
                   name="Empresa"
                   content={Company}
+                  backgroundHeight={215}
                 />
             </li>
           </ul>

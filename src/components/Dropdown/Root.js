@@ -46,6 +46,7 @@ export default function DropdownRoot () {
     )
     return () => clearTimeout(timeout)
   }, [isActive])
+
   return (
     <div style={{ perpective: 2000 }}>
       <motion.div className="dropdown-Root"
@@ -76,6 +77,7 @@ export default function DropdownRoot () {
           }}
         >
           < DropdownBackground />
+
           <motion.div
             animate= {{
               x: -x
@@ -93,7 +95,7 @@ export default function DropdownRoot () {
 
         </motion.div>
 
-        <DropdownArrow isFirstInteraction={isFirstInteraction} />
+        <DropdownArrow isFirstInteraction ={isFirstInteraction} />
 
       </motion.div>
 
@@ -131,9 +133,25 @@ function DropdownArrow ({ isFirstInteraction }) {
 }
 
 export function DropdownBackground () {
-  return (
-    <motion.div>
+  const { cachedId, getOptionById } = useContext(Context)
 
-    </motion.div>
+  const cachedOption = useMemo(() => getOptionById(cachedId), [
+    cachedId,
+    getOptionById
+  ])
+
+  const backgroundHeight = cachedOption?.backgroundHeight || 0
+
+  return (
+    < motion.div
+        className = "dropdown-background"
+        animate = {{
+          height: backgroundHeight
+        }}
+        transição = {{
+          ease: 'easeOut',
+          duração: refDuration
+        }}
+    />
   )
 }
