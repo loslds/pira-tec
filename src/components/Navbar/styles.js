@@ -45,7 +45,7 @@ export const DropdownStyles = styled.div`
   }
 
   .dropdown-container {
-    position: absolute;
+    position: absolute; 
     overflow: hidden;
     box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
       0 30px 60px -30px rgba(0, 0, 0, 0.3),

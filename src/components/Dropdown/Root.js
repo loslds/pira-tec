@@ -1,5 +1,6 @@
 import React, { useContext, useMemo, useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import PropTypes from 'prop-types'
 import { Context } from './Provider'
 import { DropdownSection } from './Section'
 
@@ -12,6 +13,7 @@ export default function DropdownRoot () {
     cachedId,
     getOptionById
   ])
+
   let [width, height, x] = [0, 0, 0]
 
   if (cachedOption) {
@@ -46,9 +48,10 @@ export default function DropdownRoot () {
     )
     return () => clearTimeout(timeout)
   }, [isActive])
+
   return (
     <div style={{ perpective: 2000 }}>
-      <motion.div className="dropdown-Root"
+      <motion.div className="dropdown-root"
         animate={{
           opacity: isActive ? 1 : 0,
           rotate: isActive ? 0 : -15
@@ -75,10 +78,10 @@ export default function DropdownRoot () {
             pointerEvents: { delay: 0.05 }
           }}
         >
-          < DropdownBackground />
+          <DropdownBackground />
           <motion.div
             animate= {{
-              x: -x
+              x: x - x
             }}
             transition={{
               x: isFirstInteraction ? { duration: 0 } : undefined
@@ -128,6 +131,10 @@ function DropdownArrow ({ isFirstInteraction }) {
       }}
     />
   )
+}
+
+DropdownArrow.propTypes = {
+  isFirstInteraction: PropTypes.bool
 }
 
 export function DropdownBackground () {
