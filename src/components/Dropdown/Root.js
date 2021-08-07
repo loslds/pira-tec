@@ -6,13 +6,13 @@ import { DropdownSection } from './Section'
 
 const refDuration = 0.22
 
-export default function DropdownRoot () {
+export default function DropdownRoot() {
   const { options, cachedId, getOptionById, targetId } = useContext(Context)
 
-  const cachedOption = useMemo(() => getOptionById(cachedId), [
-    cachedId,
-    getOptionById
-  ])
+  const cachedOption = useMemo(
+    () => getOptionById(cachedId),
+    [cachedId, getOptionById]
+  )
 
   let [width, height, x] = [0, 0, 0]
 
@@ -51,7 +51,8 @@ export default function DropdownRoot () {
 
   return (
     <div style={{ perpective: 2000 }}>
-      <motion.div className="dropdown-root"
+      <motion.div
+        className="dropdown-root"
         animate={{
           opacity: isActive ? 1 : 0,
           rotate: isActive ? 0 : -15
@@ -80,7 +81,7 @@ export default function DropdownRoot () {
         >
           <DropdownBackground />
           <motion.div
-            animate= {{
+            animate={{
               x: x - x
             }}
             transition={{
@@ -89,28 +90,25 @@ export default function DropdownRoot () {
             onHoverStart={() => setHovering(true)}
             onHoverEnd={() => setHovering(false)}
           >
-            {options.map((item) => (
-            <DropdownSection key={item.id} option={item} />
+            {options.map(item => (
+              <DropdownSection key={item.id} option={item} />
             ))}
           </motion.div>
-
         </motion.div>
 
-        <DropdownArrow isFirstInteraction ={isFirstInteraction} />
-
+        <DropdownArrow isFirstInteraction={isFirstInteraction} />
       </motion.div>
-
     </div>
   )
 }
 
-function DropdownArrow ({ isFirstInteraction }) {
+function DropdownArrow({ isFirstInteraction }) {
   const { cachedId, getOptionById } = useContext(Context)
 
-  const cachedOption = useMemo(() => getOptionById(cachedId), [
-    cachedId,
-    getOptionById
-  ])
+  const cachedOption = useMemo(
+    () => getOptionById(cachedId),
+    [cachedId, getOptionById]
+  )
 
   const x = cachedOption ? cachedOption.optionCenterX : 0
 
@@ -137,26 +135,26 @@ DropdownArrow.propTypes = {
   isFirstInteraction: PropTypes.bool
 }
 
-export function DropdownBackground () {
+export function DropdownBackground() {
   const { cachedId, getOptionById } = useContext(Context)
 
-  const cachedOption = useMemo(() => getOptionById(cachedId), [
-    cachedId,
-    getOptionById
-  ])
+  const cachedOption = useMemo(
+    () => getOptionById(cachedId),
+    [cachedId, getOptionById]
+  )
 
   const backgroundHeight = cachedOption?.backgroundHeight || 0
 
   return (
     <motion.div
-        className = "dropdown-background"
-        animate = {{
-          height: backgroundHeight
-        }}
-        transição = {{
-          ease: 'easeOut',
-          duração: refDuration
-        }}
+      className="dropdown-background"
+      animate={{
+        height: backgroundHeight
+      }}
+      transição={{
+        ease: 'easeOut',
+        duração: refDuration
+      }}
     />
   )
 }
