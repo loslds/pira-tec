@@ -86,6 +86,7 @@ export default function DropdownOpction ({ name, content: Content, backgroundHei
       onHoverEnd={ () => window.isMobile && handleClose()}
       onTouchStart={handleTouch}
       onFocus={handleOpen}
+
       onBlur={handleClose}
     >
       {name}

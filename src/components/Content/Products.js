@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { ProductsWrapper } from './styles'
 
@@ -9,16 +10,20 @@ export const Products = () => (
         <span className="payments" />
 
         <div>
-          <h3>Payments</h3>
-          <p>Plataforma completa para pagamentos online</p>
+          <Link to="/products">
+            <h3>Produtos</h3>
+            <p>Clique aqui para ver todos os produtos</p>
+          </Link>
         </div>
       </li>
       <li>
         <span className="billing" />
 
         <div>
-          <h3>Billing</h3>
+          <Link to="/user">
+          <h3>Usuários</h3>
           <p>Plataforma completa para pagamentos online</p>
+          </Link>
         </div>
       </li>
       <li>
