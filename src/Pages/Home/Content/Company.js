@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { CompanyWrapper } from './styles'
+import { CompanyWrapper } from './styleContentHome'
 
 export const Company = () => (
   <CompanyWrapper>

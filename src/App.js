@@ -1,15 +1,10 @@
 import React from 'react'
-import GlobalStyles from './styles/GlobalStyles'
-import Layout from './components/Layout'
-import Navbar from './components/Navbar'
+import { MainRouter } from './routes'
 
 function App() {
   return (
     <>
-      <Layout>
-        <Navbar />
-      </Layout>
-      <GlobalStyles />
+      <MainRouter />
     </>
   )
 }

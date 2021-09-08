@@ -6,16 +6,16 @@ export const Container = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 21px;
+    padding: 0 11px;
   }
 `
 export const DropdownStyles = styled.div`
   .dropdown-option {
-    padding: 20px 25px;
+    padding: 10px 15px;
     outline: 0;
     color: #fff;
     font-size: 18px;
-    transition: 0.2s;
+    transition: 0.25s;
 
     &:hover,
     &:focus {
@@ -24,7 +24,7 @@ export const DropdownStyles = styled.div`
   }
 
   .dropdown-root {
-    z-index: 10;
+    z-index: 100;
     position: absolute;
   }
 
@@ -61,7 +61,7 @@ export const DropdownStyles = styled.div`
   .dropdown-background {
     position: absolute;
     bottom: 0;
-    background: #f6f9fc;
+    background: #80b0e2;
     width: 100%;
   }
 `

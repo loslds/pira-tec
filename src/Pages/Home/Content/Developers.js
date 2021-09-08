@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { DevelopersWrapper } from './styles'
+import { DevelopersWrapper } from './styleContentHome'
 
 export const Developers = () => (
   <DevelopersWrapper>

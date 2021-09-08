@@ -1,6 +1,6 @@
 import React from 'react'
-
-import { ProductsWrapper } from './styles'
+import { Link } from 'react-router-dom'
+import { ProductsWrapper } from './styleContentHome'
 
 export const Products = () => (
   <ProductsWrapper>
@@ -9,8 +9,10 @@ export const Products = () => (
         <span className="payments" />
 
         <div>
-          <h3>Payments</h3>
-          <p>Plataforma completa para pagamentos online</p>
+          <Link to="/products">
+            <h3>Produtos</h3>
+            <p>Clique aqui para ver todos os produtos</p>
+          </Link>
         </div>
       </li>
       <li>

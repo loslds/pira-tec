@@ -42,8 +42,8 @@ export const ProductsWrapper = styled.div`
       }
       span {
         display: inline-block;
-        width: 48px;
-        height: 48px;
+        width: 28px;
+        height: 28px;
         border-radius: 50%;
         &.payments {
           background: #80b9f9;
@@ -146,7 +146,7 @@ export const DevelopersWrapper = styled.div`
     li {
       ${hover}
       ${h3}
-      
+
       display: flex;
       align-items: center;
       & + li {
