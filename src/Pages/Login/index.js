@@ -1,5 +1,6 @@
 import React from 'react'
-export default function PageLogin() {
+
+export const PageLogin = () => {
   return (
     <>
       <div>

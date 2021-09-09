@@ -1,13 +1,13 @@
 import React from 'react'
-import { Products, Developers, Company } from '../Content'
+import { Products, Developers, Company } from './Content'
 import {
   DropdownProvider,
   DropdownOpction,
   DropdownRoot
-} from '../Content/Dropdown'
+} from './Content/Dropdown'
 import { Container, DropdownStyles } from './styleNavHome'
 
-function NavbarHome() {
+export function NavbarHome() {
   return (
     <DropdownProvider>
       <DropdownStyles>
@@ -17,7 +17,7 @@ function NavbarHome() {
               <DropdownOpction
                 name="Empresa"
                 content={Company}
-                backgroundHeight={'215'}
+                backgroundHeight={'150'}
               />
             </li>
             <li>
@@ -36,10 +36,8 @@ function NavbarHome() {
             </li>
           </ul>
         </Container>
-
         <DropdownRoot />
       </DropdownStyles>
     </DropdownProvider>
   )
 }
-export default NavbarHome

@@ -39,11 +39,6 @@ ul {
     list-style: none;
     padding-left: 0;
 }
-.main {
-  margin: 0;
-  padding: 0;
-  border: 2px red solid;
-}
 
 #root{
   display: block;

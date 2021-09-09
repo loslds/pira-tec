@@ -1,15 +1,21 @@
 import React from 'react'
-import GlobalStyles from '../../styles/GlobalStyles'
-import Layout from '../Home/styleHome'
-import Navbar from '../NavBar/NaveBarHome'
+import styled from 'styled-components'
 
-export const HomePage = () => {
+const ContainerMain = styled.div`
+  border: 1px red dashed;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+`
+export const PageHome = () => {
   return (
-    <GlobalStyles />
-      <Layout>
-        <Navbar />
-        <h1>HOME PAGE</h1>
-      <p>tESTE DE CONTEUDO</p>
-      </Layout>
+    <ContainerMain>
+      <h1>HOME PAGE</h1>
+    </ContainerMain>
   )
 }

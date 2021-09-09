@@ -7,34 +7,18 @@ export const Company = () => (
     <ul className="primary">
       <li>
         <span />
-        Sobre a stripe
+        Acessos.
       </li>
       <li>
         <span />
-        Clientes
+        Sobre o Sistema.
       </li>
       <li>
         <span />
-        Corporativo
-      </li>
-      <li>
-        <span />
-        Parceiros
-      </li>
-      <li>
-        <span />
-        Empregos
-      </li>
-      <li>
-        <span />
-        Meio ambiente
-      </li>
-      <li>
-        <span />
-        Notícias
+        Versão
       </li>
     </ul>
-    <ul className="secondary">
+    {/* <ul className="secondary">
       <li className="title">
         <span className="title-icon" />
         Do blog
@@ -52,6 +36,6 @@ export const Company = () => (
         Online bank transfers through FPX are now...
         <span className="arrow">{'>'}</span>
       </li>
-    </ul>
+    </ul> */}
   </CompanyWrapper>
 )
