@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import { CompanyWrapper } from './styleContentHome'
 
@@ -7,7 +8,7 @@ export const Company = () => (
     <ul className="primary">
       <li>
         <span />
-        Acessos.
+        <Link to="/login">Acessos.</Link>
       </li>
       <li>
         <span />
