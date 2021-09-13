@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
 html {
     min-height: 100%;
-    background: #66bce7;
+    background: #08a0f8;
 
 }
 
@@ -56,7 +56,7 @@ code {
 
 p{
   display: block;
-  margin: 0px auto;
+  margin: 0px 16px auto;
   padding: 0px;
 }
 `

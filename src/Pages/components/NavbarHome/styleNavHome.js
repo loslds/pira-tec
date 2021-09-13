@@ -9,6 +9,7 @@ export const Container = styled.nav`
     padding: 0 11px;
   }
 `
+
 export const DropdownStyles = styled.div`
   .dropdown-option {
     padding: 10px 15px;

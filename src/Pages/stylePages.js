@@ -13,3 +13,10 @@ export const ContainerMain = styled.div`
   color: Black;
   background-color: #ffffff;
 `
+export const ContainerCard = styled.div`
+  border: 0px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  width: 100%;
+  min-height: 50px;
+`
