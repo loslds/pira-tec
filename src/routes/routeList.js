@@ -8,7 +8,6 @@ import { PageLogin } from '../Pages/Login'
 export const routeList = [
   {
     exact: true,
-    label: 'PageHome',
     path: '/',
     component: PageHome,
     layout: LayoutApp

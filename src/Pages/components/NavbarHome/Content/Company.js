@@ -10,31 +10,12 @@ export const Company = () => (
       </li>
       <li>
         <span className="sigma" />
-        Sobre o Sistema.
+        <Link to="/login">Sobre o Sistema.</Link>
       </li>
       <li>
         <span className="radar" />
-        Versão
+        <Link to="/login">Versão.</Link>
       </li>
     </ul>
-    {/* <ul className="secondary">
-      <li className="title">
-        <span className="title-icon" />
-        Do blog
-      </li>
-      <li>
-        Payouts with no code required
-        <span className="new-tag">Novo</span>
-        <span className="arrow">{'>'}</span>
-      </li>
-      <li>
-        Introducing the Billing customer portal
-        <span className="arrow">{'>'}</span>
-      </li>
-      <li>
-        Online bank transfers through FPX are now...
-        <span className="arrow">{'>'}</span>
-      </li>
-    </ul> */}
   </CompanyWrapper>
 )

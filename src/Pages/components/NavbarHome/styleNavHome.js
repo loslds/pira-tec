@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.nav`
-  background: linear-gradient(150deg, #53f, 15%, #05d5ff);
+  background: linear-gradient(150deg, #838383, 35%, #f9fafc);
+  font-style: bold;
   > ul {
     display: flex;
     align-items: center;
@@ -14,7 +15,7 @@ export const DropdownStyles = styled.div`
   .dropdown-option {
     padding: 10px 15px;
     outline: 0;
-    color: #fff;
+    color: #474646;
     font-size: 18px;
     transition: 0.25s;
 
@@ -37,7 +38,7 @@ export const DropdownStyles = styled.div`
       position: absolute;
       width: 16px;
       height: 16px;
-      background: #fff;
+      background: #b7d4f3;
       top: -8.5px;
       left: -8px;
       border-top: 2px red solid;
@@ -50,10 +51,10 @@ export const DropdownStyles = styled.div`
   .dropdown-container {
     position: absolute;
     overflow: hidden;
-    box-shadow: 0 30px 100px -20px rgba(11, 127, 156, 0.9),
+    box-shadow: 0 20px 100px -20px rgb(73, 130, 177),
       0 20px 60px -30px rgba(0, 0, 0, 0.5),
       0 -10px 60px -10px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: #b7d4f3;
     border-radius: 4px;
   }
 
@@ -64,7 +65,7 @@ export const DropdownStyles = styled.div`
   .dropdown-background {
     position: absolute;
     bottom: 0;
-    background: #80b0e2;
+    background: #8ba4be;
     width: 100%;
   }
 `

@@ -7,7 +7,7 @@ const LayoutContainer = styled.div`
   max-width: 100%;
   margin: 0 auto;
   height: 100%;
-  background-color: #3dc3f8d5;
+  background-color: transparent;
 `
 export const LayoutApp = ({ children }) => {
   return (

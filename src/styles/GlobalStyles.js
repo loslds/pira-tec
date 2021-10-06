@@ -9,7 +9,7 @@ const GlobalStyles = createGlobalStyle`
 
 html {
     min-height: 100%;
-    background: #08a0f8;
+    background: linear-gradient(90deg, #838383, 35%, #f9fafc);
 
 }
 
@@ -19,7 +19,7 @@ body {
   max-width: 100%;
   height: 100%;
   overflow-x: hidden;
-  background-color:rgb(254, 254, 254);
+  background-color:linear-gradient(150deg, #838383, 35%, #f9fafc);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;

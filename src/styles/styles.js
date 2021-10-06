@@ -17,7 +17,7 @@ export const ContainerMainPage = styled.div`
   align-items: center;
   align-content: center;
   color: Black;
-  background-color: #ffffff;
+  background-color: transparent;
 `
 export const ContainerFlexPage = styled.div`
   margin: 10px auto;
@@ -25,6 +25,7 @@ export const ContainerFlexPage = styled.div`
   border: 2px black solid;
   border-radius: 10px;
   width: 98%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,7 +37,11 @@ export const ContainerCardPage = styled.div`
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
   width: 100%;
+  height: 50px;
   min-height: 50px;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
 `
 export const ContainerTextPage = styled.div`
   border: 1px red dashed;

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Products, Developers, Company } from './Content'
-
 import {
   DropdownProvider,
   DropdownOpction,
@@ -35,13 +34,6 @@ export function NavbarHome() {
                 backgroundHeight={'200'}
               />
             </li>
-            {/* <li>
-              <DropdownOpction
-                name="Login"
-                content={Login}
-                backgroundHeight={'200'}
-              />
-            </li> */}
           </ul>
         </Container>
         <DropdownRoot />
