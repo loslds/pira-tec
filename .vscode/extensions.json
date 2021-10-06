@@ -1,5 +1,6 @@
 {
-    "recommendations": [
-        "jpoissonnier.vscode-styled-components"
-    ]
+  "recommendations": [
+    "jpoissonnier.vscode-styled-components",
+    "streetsidesoftware.code-spell-checker"
+  ]
 }

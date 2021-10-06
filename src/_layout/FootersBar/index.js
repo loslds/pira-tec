@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { rootRoutes } from '../../routes/routeList'
 import { compareValues } from 'mini-helper'
-import { BarContainer, BarFlex, BarColLeft, BarColHidth, ConteinerItemLink } from '../ContainerCss'
+import {
+  BarContainer,
+  BarFlex,
+  BarColLeft,
+  BarColHidth,
+  ConteinerItemLink
+} from '../ContainerCss'
 import ButtonBar from '../ButtonBar'
 
 export default function Footers(props) {

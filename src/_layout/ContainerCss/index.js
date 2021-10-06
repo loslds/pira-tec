@@ -27,6 +27,7 @@ export const BarFlex = styled.div`
   }
 `
 export const BarColLeft = styled.div`
+  border: 0px;
   padding: 4px auto;
   margin: 4px auto;
   min-width: 49%;
@@ -35,7 +36,7 @@ export const BarColLeft = styled.div`
   align-items: center;
   align-content: center;
 `
-export const BarColHidth = styled.div`
+export const BarColRight = styled.div`
   /* border: 1px #ff0000 solid; */
   padding: 4px auto;
   margin: 4px auto;
@@ -54,7 +55,7 @@ export const ImagesContainer = styled.div`
   align-content: center;
   align-items: center;
 `
-export const ConteinerItemLink = styled.div`
+export const ContainerItemLink = styled.div`
   /* border: 1px blue solid; */
   margin: 0px 4px 0px 4px;
   padding: 0px 4px 0px 4px;

@@ -9,7 +9,6 @@ const LayoutContainer = styled.div`
   height: 100%;
   background-color: #3dc3f8d5;
 `
-
 export const LayoutApp = ({ children }) => {
   return (
     <LayoutContainer>

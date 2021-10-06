@@ -1,5 +1,6 @@
 import React from 'react'
 import { Products, Developers, Company } from './Content'
+
 import {
   DropdownProvider,
   DropdownOpction,
@@ -15,13 +16,6 @@ export function NavbarHome() {
           <ul>
             <li>
               <DropdownOpction
-                name="Empresa"
-                content={Company}
-                backgroundHeight={'150'}
-              />
-            </li>
-            <li>
-              <DropdownOpction
                 name="Produtos"
                 content={Products}
                 backgroundHeight={'286'}
@@ -34,6 +28,20 @@ export function NavbarHome() {
                 backgroundHeight={'167'}
               />
             </li>
+            <li>
+              <DropdownOpction
+                name="Empresa"
+                content={Company}
+                backgroundHeight={'200'}
+              />
+            </li>
+            {/* <li>
+              <DropdownOpction
+                name="Login"
+                content={Login}
+                backgroundHeight={'200'}
+              />
+            </li> */}
           </ul>
         </Container>
         <DropdownRoot />

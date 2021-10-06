@@ -1,21 +1,19 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import { CompanyWrapper } from './styleContentHome'
-
 export const Company = () => (
   <CompanyWrapper>
     <ul className="primary">
       <li>
-        <span />
-        <Link to="/login">Acessos.</Link>
+        <span className="atlas" />
+        <Link to="/login">Quem Somos.</Link>
       </li>
       <li>
-        <span />
+        <span className="sigma" />
         Sobre o Sistema.
       </li>
       <li>
-        <span />
+        <span className="radar" />
         Versão
       </li>
     </ul>

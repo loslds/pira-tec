@@ -38,8 +38,10 @@ export const DropdownStyles = styled.div`
       width: 16px;
       height: 16px;
       background: #fff;
-      top: -6.5px;
+      top: -8.5px;
       left: -8px;
+      border-top: 2px red solid;
+      border-left: 2px red solid;
       border-radius: 4px 0 0 0;
       transform: rotate(45deg);
     }
@@ -48,9 +50,9 @@ export const DropdownStyles = styled.div`
   .dropdown-container {
     position: absolute;
     overflow: hidden;
-    box-shadow: 0 30px 100px -20px rgba(50, 50, 93, 0.25),
-      0 20px 60px -30px rgba(0, 0, 0, 0.3),
-      0 -10px 60px -10px rgba(0, 0, 0, 0.025);
+    box-shadow: 0 30px 100px -20px rgba(11, 127, 156, 0.9),
+      0 20px 60px -30px rgba(0, 0, 0, 0.5),
+      0 -10px 60px -10px rgba(0, 0, 0, 0.1);
     background: #fff;
     border-radius: 4px;
   }
