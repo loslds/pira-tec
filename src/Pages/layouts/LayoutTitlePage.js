@@ -15,13 +15,15 @@ const CardTitle = styled.div`
   min-height: 35px;
   font-size: 18px;
 `
-export default function Title({ title }) {
+// export const LayoutCenter = ({ children }) => {
+export const LayoutTitlePage = ({ title }) => {
   return (
     <CardTitle>
       <h3>{title}</h3>
     </CardTitle>
   )
 }
-Title.propTypes = {
+
+LayoutTitlePage.propTypes = {
   title: PropTypes.string.isRequired
 }

@@ -15,7 +15,7 @@ export const DropdownStyles = styled.div`
   .dropdown-option {
     padding: 10px 15px;
     outline: 0;
-    color: #474646;
+    color: #000000;
     font-size: 18px;
     transition: 0.25s;
 
@@ -38,7 +38,7 @@ export const DropdownStyles = styled.div`
       position: absolute;
       width: 16px;
       height: 16px;
-      background: #b7d4f3;
+      background: #c5d6e9;
       top: -8.5px;
       left: -8px;
       border-top: 2px red solid;
@@ -54,7 +54,7 @@ export const DropdownStyles = styled.div`
     box-shadow: 0 20px 100px -20px rgb(73, 130, 177),
       0 20px 60px -30px rgba(0, 0, 0, 0.5),
       0 -10px 60px -10px rgba(0, 0, 0, 0.1);
-    background: #b7d4f3;
+    background: #cee0f3;
     border-radius: 4px;
   }
 

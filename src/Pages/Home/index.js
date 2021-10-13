@@ -1,14 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-
-import logoSys from '../../assets/image/logosys.png'
-import watszap from '../../assets/image/watszap.svg'
-import telefone from '../../assets/image/telefone.png'
-import email from '../../assets/image/email.png'
-import internet from '../../assets/image/internet.svg'
-import facebook from '../../assets/image/facebook.svg'
-import instagram from '../../assets/image/instagram.svg'
+import logoEmp from '../../assets/image/logosys.png'
 
 const MainContainer = styled.div`
   padding: 0 auto;
@@ -30,6 +22,7 @@ const MainContainer = styled.div`
     justify-content: center;
   }
 `
+
 const MainContainerBox = styled.div`
   border: 1px red dashed;
   height: 100vh;
@@ -40,6 +33,7 @@ const MainContainerBox = styled.div`
   align-content: center;
   align-items: center;
 `
+
 const MainContainerImg = styled.div`
   border: 1px yellow dashed;
   height: 100vh;
@@ -50,70 +44,21 @@ const MainContainerImg = styled.div`
   align-items: center;
   background-color: transparent;
 `
-const BtnMenuContainer = styled.div`
-  border: 2px green dashed;
-  max-width: 310px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  background-color: ${({ color }) => color};
-`
-const BtnMenu = styled.button`
-  display: flex;
-  width: 250px;
-  height: 50px;
-  border: 0;
-  border-radius: 10px;
-  padding: 0 auto;
-  background-color: '#73a4d4';
-  background-repeat: no-repeat;
-  background-size: 3.3em;
-  background-position: left center;
-  background-image: url(${({ img }) => img});
-  margin: 0 3px 0 3px;
-`
-const listBtnMenu = [
-  { id: 1, img: watszap, label: 'watszap', onClick: () => {} },
-  { id: 2, img: telefone, label: 'telefone', onClick: () => {} },
-  { id: 3, img: email, label: 'email', onClick: () => {} },
-  { id: 4, img: internet, label: 'internet', onClick: () => {} },
-  { id: 5, img: facebook, label: 'facebook', onClick: () => {} },
-  { id: 6, img: instagram, label: 'instagram', onClick: () => {} }
-]
 
 export const PageHome = () => {
-  const { color } = 'transparent'
   return (
-    <MainContainer color={color}>
+    <MainContainer>
       <MainContainerBox>
         <div>
           <MainContainerImg>
             <div>
-              <img src={logoSys} alt="LOGO" title="LOGO TESTE" width="450" />
+              <img src={logoEmp} alt="LOGO" title="LOGO TESTE" width="550" />
             </div>
           </MainContainerImg>
         </div>
       </MainContainerBox>
-      <div>
-        <BtnMenuContainer>
-          <div>
-            {listBtnMenu.map(({ id, img, label, onClick }) => {
-              return (
-                <BtnMenu key={id} img={img} onClick={onClick} title={label} />
-              )
-            })}
-          </div>
-        </BtnMenuContainer>
-      </div>
     </MainContainer>
   )
-}
-PageHome.defaultProps = {
-  color: 'transparent'
-}
-PageHome.propTypes = {
-  color: PropTypes.string
 }
 
 // import {

@@ -1,5 +1,7 @@
 import React from 'react'
 import { NavbarHome } from '../components/NavbarHome'
+import { FootersBar } from '../components/FootersBar'
+
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -14,6 +16,7 @@ export const LayoutApp = ({ children }) => {
     <LayoutContainer>
       <NavbarHome />
       {children}
+      <FootersBar />
     </LayoutContainer>
   )
 }

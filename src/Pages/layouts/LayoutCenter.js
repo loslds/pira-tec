@@ -20,6 +20,7 @@ export const LayoutCenter = ({ children }) => {
 LayoutCenter.propTypes = {
   children: PropTypes.any
 }
+
 LayoutCenter.defaultProps = {
   children: null
 }

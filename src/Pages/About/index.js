@@ -6,26 +6,18 @@ import {
   ContainerTextPage
 } from '../../styles/styles'
 import { LayoutTitlePage } from '../layouts/LayoutTitlePage'
-import styled from 'styled-components'
+import { ContainerFormAbout } from './staylesContact'
 
-const ContainerFormLogin = styled.div`
-  margin: 0 auto;
-  padding: 0 auto;
-  height: 100px;
-  width: 300px;
-  border: 2px red solid;
-`
-
-export const PageLogin = () => {
+export const PageAbout = () => {
   return (
     <ContainerMainPage>
       <ContainerFlexPage>
         <ContainerCardPage>
-          <LayoutTitlePage title={'LOGIN'} />
+          <LayoutTitlePage title={'SOBRE'} />
           <ContainerTextPage>
-            <ContainerFormLogin>
-              <h1>PAGE LOGIN</h1>
-            </ContainerFormLogin>
+            <ContainerFormAbout>
+              <h1>PAGE ABOUT</h1>
+            </ContainerFormAbout>
           </ContainerTextPage>
         </ContainerCardPage>
       </ContainerFlexPage>
