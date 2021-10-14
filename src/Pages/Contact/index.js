@@ -1,10 +1,8 @@
 import React from 'react'
-import {
-  LayoutContainer,
-  LayoutHeader,
-  LayoutMain,
-  LayoutFooter
-} from '../layouts/LayoutPage'
+import { LayoutContainer } from '../components/LayoutContainer'
+import { LayoutHeader } from '../components/LayoutHeader'
+import { LayoutMain } from '../components/LayoutMain'
+import { LayoutFooter } from '../components/LayoutFooter'
 
 export const PageContact = () => {
   return (

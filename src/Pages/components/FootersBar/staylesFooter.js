@@ -103,7 +103,7 @@ export const ImageMenu = styled.img`
   height: 48px;
   width: 48px;
 `
-export const CallContainerFooter = styled.div`
+export const ContainerDataCompany = styled.div`
   border: 1px black solid;
   border-radius: 10px;
   padding: 5px auto;
@@ -113,7 +113,11 @@ export const CallContainerFooter = styled.div`
   width: 350px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: start;
+  justify-content: left;
   align-content: center;
   align-items: center;
+  > p {
+    font-style: normal;
+    font-size: 10pt;
+  }
 `
