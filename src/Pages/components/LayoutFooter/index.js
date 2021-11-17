@@ -5,6 +5,7 @@ import { LayoutFooterPage } from '../../layouts/stylesLayouts'
 export const LayoutFooter = ({ children }) => {
   return <LayoutFooterPage>{children}</LayoutFooterPage>
 }
-LayoutFooter.prototype = {
-  children: PropTypes.string
+
+LayoutFooter.propTypes = {
+  children: PropTypes.any
 }

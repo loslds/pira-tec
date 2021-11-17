@@ -38,7 +38,7 @@ export const DropdownStyles = styled.div`
       position: absolute;
       width: 16px;
       height: 16px;
-      background: #c5d6e9;
+      background: rgb(206, 224, 246);
       top: -8.5px;
       left: -8px;
       border-top: 2px red solid;
@@ -55,6 +55,7 @@ export const DropdownStyles = styled.div`
       0 20px 60px -30px rgba(0, 0, 0, 0.5),
       0 -10px 60px -10px rgba(0, 0, 0, 0.1);
     background: #cee0f3;
+    border: 2px red solid;
     border-radius: 4px;
   }
 

@@ -1,7 +1,7 @@
 import React from 'react'
-
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
-import { routeList } from '../routes/routeList'
+import { routeList, routeListOptionCompany } from '../routes/routeList'
+
 function RouteWithSubRoutes(route) {
   const logged = true
 
@@ -25,14 +25,15 @@ function RouteWithSubRoutes(route) {
   )
 }
 
-export default function MainRouter() {
-  const routes = [...routeList]
+export function MainRouter() {
+  const routes = [...routeListOptionCompany, ...routeList]
 
   return (
     <BrowserRouter>
       <Switch>
-        {routes.map((route, i) => {
-          const key = `route-${i}`
+        {routes.map(route => {
+          console.log(route)
+          const key = `route-${route.path}`
           return <RouteWithSubRoutes key={key} {...route} />
         })}
       </Switch>

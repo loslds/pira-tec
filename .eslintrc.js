@@ -16,7 +16,8 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/prop-types': 'warn',
     'space-before-function-paren': 'off',
-    semi: 'error'
+    semi: 'warn', 
+    'no-unused-vars': 'warn'
   },
   settings: {
     react: {

@@ -28,6 +28,9 @@ body {
   border: 0;
 }
 
+/* a:visited{
+  color: initial;
+} */
 
 *, button, input {
     border: 0;

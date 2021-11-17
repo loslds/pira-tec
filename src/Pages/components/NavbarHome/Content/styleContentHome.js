@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 const h3 = css`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   color: #32325d;
@@ -145,7 +145,6 @@ export const DevelopersWrapper = styled.div`
     li {
       ${hover}
       ${h3}
-
       display: flex;
       align-items: center;
       & + li {
@@ -176,8 +175,7 @@ export const DevelopersWrapper = styled.div`
 export const CompanyWrapper = styled.div`
   padding: 32px 35px;
   white-space: nowrap;
-  border: 2px #000 solid;
-  border-radius: 8px;
+  border-radius: 3.5px;
   .primary {
     > li {
       ${h3}
@@ -191,6 +189,7 @@ export const CompanyWrapper = styled.div`
         display: inline-block;
         width: 25px;
         height: 25px;
+        border: 0px;
         border-radius: 3.5px;
         margin-right: 13px;
         &.sigma {

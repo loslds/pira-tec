@@ -53,6 +53,8 @@ export const PageHome = () => {
           <MainContainerImg>
             <div>
               <img src={logoEmp} alt="LOGO" title="LOGO TESTE" width="550" />
+              <img src={logoEmp} alt="LOGO" title="LOGO TESTE" width="550" />
+              <img src={logoEmp} alt="LOGO" title="LOGO TESTE" width="550" />
             </div>
           </MainContainerImg>
         </div>

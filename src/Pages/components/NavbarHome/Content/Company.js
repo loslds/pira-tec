@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// import { PageLogin } from '../../../Login'
+// import { useLocation } from 'react-router-dom'
 import { CompanyWrapper } from './styleContentHome'
 export const Company = () => (
   <CompanyWrapper>
@@ -10,11 +12,11 @@ export const Company = () => (
       </li>
       <li>
         <span className="sigma" />
-        <Link to="/login">Sobre o Sistema.</Link>
+        <h3>Sobre o Sistema.</h3>
       </li>
       <li>
         <span className="radar" />
-        <Link to="/login">Versão.</Link>
+        <h3>Versão Sistema.</h3>
       </li>
     </ul>
   </CompanyWrapper>

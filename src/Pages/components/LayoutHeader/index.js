@@ -5,9 +5,7 @@ import { LayoutHeaderPage } from '../../layouts/stylesLayouts'
 export const LayoutHeader = ({ children }) => {
   return <LayoutHeaderPage>{children}</LayoutHeaderPage>
 }
-LayoutHeader.prototype = {
+
+LayoutHeader.propTypes = {
   children: PropTypes.any
-}
-LayoutHeader.default = {
-  children: null
 }

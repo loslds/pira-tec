@@ -5,6 +5,7 @@ import { LayoutMainPage } from '../../layouts/stylesLayouts'
 export const LayoutMain = ({ children }) => {
   return <LayoutMainPage>{children}</LayoutMainPage>
 }
-LayoutMain.prototype = {
-  children: PropTypes.string
+
+LayoutMain.propTypes = {
+  children: PropTypes.any
 }

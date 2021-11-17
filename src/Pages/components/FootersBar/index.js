@@ -1,5 +1,4 @@
 import React from 'react'
-import HomeIcon from '@mui/icons-material/Home';
 import { Link } from 'react-router-dom'
 import { routeList } from '../../../routes/routeList'
 import {
@@ -18,11 +17,11 @@ export function FootersBar() {
         <BarColLeft>
           <ContainerItemLink>
             {routeList.map(route => {
-              const { id, label, path } = route
+              const { id, img: Img, label, path } = route
               return (
                 <div key={id}>
-                  <Link to={path} key={`link-${id}`}>
-                    <HomeIcon fontSize="large" />
+                  <Link to={path}>
+                    <Img />
                     {label}
                   </Link>
                 </div>
