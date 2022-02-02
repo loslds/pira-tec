@@ -36,10 +36,10 @@ export const LayoutContainerPage = styled(Divs)`
   padding: 0 auto;
   width: 920px;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: space-between;
-  align-items: flex-start;
-  align-content: flex-start;
+  align-items: center;
+  align-content: center;
   height: 100%;
 `
 

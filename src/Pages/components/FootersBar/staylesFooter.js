@@ -87,7 +87,6 @@ export const ButtomMenu = styled.button`
   justify-items: center;
   font-size: 20px;
   cursor: pointer;
-  /* background-image: url(${({ img }) => semimg}); */
   background-size: 40px;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -96,14 +95,6 @@ export const ButtomMenu = styled.button`
   opacity: 0.5;
 `
 
-// export const ImageMenu = styled.img`
-//   padding: 0 auto;
-//   margin: 0 auto;
-//   display: block;
-//   height: 45px;
-//   width: 45px;
-//   /* background-image: url('../../../assets/image/semimg.svg'); */
-// `
 export const ContainerDataCompany = styled.div`
   border: 1px black solid;
   border-radius: 10px;

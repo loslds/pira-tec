@@ -6,7 +6,7 @@ import {
   ContainerTextPage
 } from '../../styles/styles'
 import { LayoutTitlePage } from '../layouts/LayoutTitlePage'
-import { ContainerFormAbout } from './staylesContact'
+import { ContainerFormAbout } from './stylesContact'
 
 export const PageAbout = () => {
   return (
